@@ -158,7 +158,19 @@
             </div>
 
             <!--Блок для добавления новых книг-->
-            <div class="row book__boxMain"></div>
+            <div class="row book__boxMain" dnd-list="sortBooks">
+                <h3 class="heading__sort">Еще несколько книг</h3>
+                <div class="col-xs-12 col-md-3 col-lg-3 book__box two animate-enter-setup" ng-repeat="sortBook in sortBooks | limitTo:4" ng-animate="{enter: 'animate-enter'}"
+                    dnd-draggable="sortBook"
+                    dnd-moved="sortBooks.splice($index, 1)"
+                    dnd-effect-allowed="move"
+                >
+                    <div class="book__box_img"><a href="{{sortBook.imageUrl}}"><img src="{{sortBook.imageUrl}}" alt="Тестовая верстка миф"></a></div>
+                    <p class="book__box_text" ng-bind-html="sortBook.text">
+                        {{sortBook.text}}
+                    </p>
+                </div>
+            </div>
 
             <div class="row col-lg-offset-5 book__add">
                 <input type="submit" value="Еще несколько книг" title="добавить" ng-click="addBook()">
