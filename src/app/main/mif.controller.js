@@ -15,7 +15,6 @@ mifApp.controller('MifCtrl', ['$scope', '$http', 'api', function ($scope, $http,
         $scope.modelAsJson = angular.toJson(books, true);
     }, true);
 
-
     // Функционал добавления еще 4 книг на страницу, в случайном порядке.
     // Запрашиваем и получаем данные модели, с описанием книг. Для добавления их по кнопке - "Еще несколько книг". Данные сортируются.
     $http.get('books/booksSort.json').success(function(data) {
