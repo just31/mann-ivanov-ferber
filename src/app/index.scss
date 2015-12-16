@@ -1,0 +1,1748 @@
+﻿/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+@font-face {
+font-family: ALSFuchsia; /* Гарнитура шрифта */
+src: url(../assets/fonts/alsfuchsia.otf); /* Путь к файлу со шрифтом */
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body,
+html {
+    height: 100vw;
+}
+
+body {
+    font-size: 100%;
+    line-height: normal;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 60px;
+    padding-right: 80px;
+    display: block;
+    width: 100%;
+    max-width: 1366px;
+    background-color: #fff !important;
+}
+
+.header {
+    position: relative;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-bottom: 60px;
+}
+
+.header__search {
+    margin-left: -50px;
+}
+
+input[type="search"] {
+    float: left !important;
+	outline: none;
+	border: 0 none;
+	color: #777;
+	width: 270px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 6px 10px 6px 30px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2) inset;
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,0.2) inset;
+	box-shadow: 0 0 4px rgba(0,0,0,0.2) inset;
+	-webkit-appearance: none;
+    background-image: url(../assets/images/loop.png);
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+}
+
+input#search {
+    &::-webkit-input-placeholder {
+        padding-left: 0;
+        margin-left: 7px;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        padding-left: 0;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        padding-left: 0;
+    }
+        &:-ms-input-placeholder {
+        padding-left: 30px;
+  }
+}
+
+input[type="submit"] {
+    margin-top: -40px;
+    margin-left: 280px;
+    float: left;
+    width: 29px; /* Ширина кнопки */
+    height: 30px; /* Высота кнопки */
+    border: none; /* Убираем рамку */
+    background: url(../assets/images/buttonSearch.gif) no-repeat; /* Параметры фона */
+}
+
+input[type="submit"]:active, input[type="submit"]:focus {
+    outline: none;
+}
+
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+}
+
+
+.title {
+    margin-left: 120px;
+    text-align: center !important;
+    h1 {
+        font-family: Arial;
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+}
+
+.td {
+    position: relative;
+    display: table-cell;
+    .book__anons {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        img {
+            margin: 0 0 0 30px;
+        }
+        img[src="assets/images/bookAnons2.jpg"] {
+            margin: 50px 0 0 80px;
+        }
+        img[src="assets/images/bookAnons3.jpg"] {
+            margin: 50px 0 30px 60px;
+        }
+        p {
+            margin-top: 5px;
+            margin-left: 25px;
+            width: 220px;
+            text-align: center;
+            font-family: Arial;
+            font-weight: 500;
+            font-size: 1vw;
+            line-height: 1.4;
+        }
+        > #text__quotes {
+            &:before {
+                content: "«";
+                font-size: 30px;
+            }
+            &:after {
+                content: "»";
+                font-size: 30px;
+                line-height: 1;
+            }
+        }
+    }
+    .book__eye {
+        margin: 55px 85px;
+        z-index: 1;
+
+        img {
+            width: 364px;
+            -webkit-box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
+	        -moz-box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
+            box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
+        }
+    }
+    .book__tab {
+        position: absolute;
+        top: 572px;
+        left: 135px;
+    }
+    .book__top100 {
+        margin-top: -14px;
+        width: 300px;
+        text-align: center;
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: 500;
+
+        span {
+            color: #f44048;
+        }
+    }
+
+    .book__button {
+        input[type="submit"] {
+            margin-top: 30px;
+            margin-left: -45px;
+            width: 382px; /* Ширина кнопки */
+            height: 68px; /* Высота кнопки */
+            border: none; /* Убираем рамку */
+            background: url(../assets/images/buttonBuy1.png) no-repeat; /* Параметры фона */
+            -webkit-border-radius: 20px;
+	        -moz-border-radius: 20px;
+	        border-radius: 20px;
+            -webkit-box-shadow: 0.4em 0.5em 14px rgba(122,122,122,0.5);
+	        -moz-box-shadow: 0.4em 0.5em 14px rgba(122,122,122,0.5);
+            box-shadow: 0.4em 0.5em 14px rgba(122,122,122,0.5);
+            transition: 0.5s ease-out;
+            transform: translateY(0px);
+        }
+        input[type="submit"]:hover {
+            background: url(../assets/images/buttonBuy2.png) no-repeat; /* Параметры фона */
+            transition: 0.5s ease-out;
+            transform: translateY(-5px);
+        }
+        input[type="submit"]:active {
+            background: url(../assets/images/buttonBuy3.png) no-repeat; /* Параметры фона */
+        }
+        input[type="submit"]:active, input[type="submit"]:focus {
+            outline: none;
+        }
+        input[type="submit"]::-moz-focus-inner {
+            border: 0;
+        }
+
+    }
+    .book__info {
+        margin-top: 25px;
+        margin-left: 111px;
+        width: 350px;
+        text-align: center;
+        font-family: Arial;
+        font-style: italic;
+        font-size: 13px;
+        color: #dcdcdc;
+    }
+    .book__Scraffi {
+        margin-top: 10px;
+        margin-left: 255px;
+    }
+
+    .eye {
+        position: absolute;
+        top: 279px;
+        left: 141px;
+        width: 112px;
+        height: 112px;
+        padding-top: 38px;
+        padding-left: 42px;
+        opacity: .9;
+        border: solid 2px #fff;
+        -webkit-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    border-radius: 100px;
+        img {
+            width: 26px !important;
+            box-shadow: 0 0 0 inset;
+        }
+    }
+    .eyeStage {
+        position: absolute;
+        top: 274px;
+        left: 138px;
+        width: 112px;
+        height: 112px;
+        opacity: 1;
+        img {
+            position: absolute;
+            width: 120px;
+            box-shadow: 0 0 0 inset;
+            z-index: 100;
+        }
+    }
+}
+
+.title__2 {
+    margin-top: 100px;
+    margin-left: -10px;
+    text-align: center !important;
+    h1 {
+        font-family: Arial;
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+}
+
+.introductory__text_one {
+    margin-top: 50px;
+    margin-left: 160px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 32px;
+}
+
+.dndPlaceholder {
+    display: block;
+    list-style: none !important;
+}
+
+.book__box {
+    margin-bottom: 70px;
+    position: relative;
+    height: 390px;
+}
+
+.book__box_img {
+    margin: 0 auto;
+    margin-bottom: 9px;
+    width: 302px;
+}
+
+.book__box_img {
+    margin: 0 auto;
+    margin-bottom: 9px;
+    width: 302px;
+    img {
+        width: 200px;
+        height: 302px;
+        display: block;
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 250ms;
+        -moz-transform: scale(1, 1);
+        -moz-transition-timing-function: ease-out;
+        -moz-transition-duration: 250ms;
+        cursor: pointer;
+        //cursor: move;
+        &:hover {
+        -webkit-transform: scale(1.1, 1.1);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 250ms;
+        -moz-transform: scale(1.1, 1.1);
+        -moz-transition-timing-function: ease-out;
+        -moz-transition-duration: 250ms;
+        //-webkit-box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
+	    //-moz-box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
+        //box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
+        z-index: 10;
+        }
+    }
+}
+
+.book__box_img img:active,
+.book__box_img img:active:before
+.book__box_img img:active:after{
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.book__box_img img[src="assets/images/book2.jpg"] {
+    -webkit-box-shadow: 0.4em 0.4em 8px rgba(122, 122, 122, 0.5);
+    -moz-box-shadow: 0.4em 0.4em 8px rgba(122, 122, 122, 0.5);
+    box-shadow: 0.4em 0.4em 8px rgba(122, 122, 122, 0.5);
+    &:hover {
+        -webkit-box-shadow: 0.5em 0.5em 9px rgba(122, 122, 122, 0.5);
+        -moz-box-shadow: 0.5em 0.5em 9px rgba(122, 122, 122, 0.5);
+        box-shadow: 0.5em 0.5em 9px rgba(122, 122, 122, 0.5);
+    }
+}
+
+.book__box_text {
+    width: 290px;
+    margin-top: 30px;
+    margin-left: -45px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 19px;
+}
+
+.book__box_text a {
+    color: #4283c0;
+        &:hover {
+            color: #e51907 !important;
+    }
+}
+
+.two {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.book__add {
+    padding-left: 20px;
+    input[type="submit"] {
+        margin-top: 30px;
+        margin-left: -50px;
+        margin-bottom: 100px;
+        width: 267px; /* Ширина кнопки */
+        height: 40px; /* Высота кнопки */
+        color: #4283c0;
+        font-family: Arial;
+        font-size: 17px;
+        border: 2px solid #95c1e5; /* Добавляем рамку */
+        background: url(../assets/images/buttonAdd1.png) no-repeat; /* Параметры фона */
+        -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+        transition: 0.5s ease-out;
+        transform: translateY(0px);
+    }
+    input[type="submit"]:hover {
+        color: #e51907;
+        border: 2px solid #e51907; /* Добавляем рамку */
+        background: url(../assets/images/buttonAdd1.png) no-repeat; /* Параметры фона */
+        transition: 0.5s ease-out;
+        transform: translateY(10px);
+    }
+    input[type="submit"]:active {
+        color: #e51907;
+        border: 2px solid #e51907; /* Добавляем рамку */
+        background: url(../assets/images/buttonAdd1.png) no-repeat; /* Параметры фона */
+    }
+    input[type="submit"]:active, input[type="submit"]:focus {
+        outline: none;
+    }
+    input[type="submit"]::-moz-focus-inner {
+        border: 0;
+    }
+
+}
+
+.title__3 {
+    margin-bottom: 50px;
+    text-align: center !important;
+    h1 {
+        font-family: Arial;
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+}
+
+.introductory__text_two {
+    margin-left: 160px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 32px;
+}
+
+.sub__title {
+    margin-bottom: 20px;
+    text-align: left !important;
+    h2 {
+        font-family: Arial;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+}
+
+.sub__title_two {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left !important;
+    h2 {
+        font-family: Arial;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+}
+
+.heading {
+    margin-bottom: 20px;
+    text-align: left !important;
+    h3 {
+        font-family: Arial;
+        font-size: 1.2vw;
+        font-weight: bold;
+    }
+}
+
+.text {
+    margin-bottom: 50px;
+    text-align: left;
+    font-family: Arial;
+    font-size: 19px;
+    p {
+        margin-bottom: 20px;
+        line-height: 1.5;
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+    ul  {
+        margin-top: -18px;
+        margin-bottom: 19px;
+		list-style: none inside;
+	}
+	ul > li:before {
+		content: "\2014\a0";
+		margin-left: -2.6ex;
+		margin-right: 0.2ex;
+	}
+    li {
+        margin: 0.5em 0 0.5em 1.3em;
+    }
+
+}
+
+.founders__img {
+    margin-bottom: 60px;
+}
+
+.founders__img > img[src="assets/images/founders__img2.png"] {
+    margin-top: -28px;
+}
+
+.introductory__text_three {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    margin-left: 155px;
+    text-align: center;
+    font-family: ALSFuchsia;
+    font-size: 36px;
+}
+
+.footer {
+    margin-top: 5px;
+    width: 99%;
+    img {
+        margin-bottom: -5px;
+    }
+}
+
+.book__boxMain {
+    margin-top: 30px;
+    display: block;
+    opacity: 0;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+// Адаптивный дизайн
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
+  html {
+    -webkit-text-size-adjust: none;
+  }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+
+        .header {
+            margin: 40px 0 25px;
+            text-align: center;
+        }
+
+        .header__search {
+            margin-top: 30px;
+        }
+
+        input[type="search"] {
+            margin-left: 36px;
+        }
+
+        input[type="submit"] {
+            margin-top: -38px;
+            margin-left: 305px;
+        }
+
+        .title, .title__2, .title__3 {
+            margin-left: 0;
+            h1 {
+                font-family: Arial;
+                font-size: 11.5vw;
+                font-weight: bold;
+            }
+        }
+
+        .title__2 {
+            margin-bottom: 40px;
+        }
+
+        img[src="assets/images/bookEye.gif"] {
+            margin-top: -35px;
+            margin-left: -6px;
+            width: 270px;
+        }
+
+        .book__anons {
+            margin-top: 40px;
+            margin-bottom: -5px;
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .book__eye {
+            margin-left: 0;
+        }
+
+        .book__tab {
+            position: absolute;
+            top: 405px;
+            left: 40px;
+            img {
+                width: 17px;
+                height: 35px;
+            }
+        }
+
+        .book__top100 {
+            margin-top: -24px;
+            margin-left: -6px;
+            font-size: 24px;
+        }
+
+        .book__button {
+            input[type="submit"] {
+            margin-top: 60px;
+            margin-left: -11px;
+            margin-bottom: 30px;
+            width: 280px; /* Ширина кнопки */
+            height: 50px; /* Высота кнопки */
+            background: url(../assets/images/buttonBuy1.png) no-repeat; /* Параметры фона */
+            background-size: 280px 50px;
+            }
+            input[type="submit"]:hover {
+                background-size: 280px 50px;
+            }
+        }
+
+        .book__info {
+            margin-top: -5px;
+            margin-left: -30px;
+            margin-bottom: 10px;
+        }
+
+        .book__Scraffi {
+            margin-left: 112px;
+            margin-bottom: -30px;
+        }
+
+        .eyeStage {
+            top: 167px;
+            left: 100px;
+            width: 112px;
+            height: 112px;
+            img {
+                width: 88px;
+            }
+        }
+
+        .book__box_img {
+            margin-left: 40px;
+            margin-bottom: 9px;
+            height: 320px;
+        }
+
+        .book__box_text {
+            margin-top: -10px;
+            margin-left: 5px;
+            margin-bottom: 75px !important;
+        }
+
+        img[src="assets/images/book3.jpg"], img[src="assets/images/book4.jpg"] {
+            margin-top: 20px;
+        }
+
+        .book__add {
+            padding-left: 20px;
+            input[type="submit"] {
+                margin-top: 30px;
+                margin-left: 5px;
+                margin-bottom: 65px;
+            }
+        }
+
+        .introductory__text_two {
+            margin-top: -20px;
+            margin-left: 0px;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+
+        .sub__title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            h2 {
+                margin-left: 0;
+                font-size: 30px;
+            }
+        }
+
+        .founders__img {
+            margin-bottom: 30px;
+        }
+
+        .heading {
+            margin-bottom: 15px;
+            text-align: left !important;
+            h3 {
+                font-family: Arial;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+
+        .text {
+            margin-bottom: 20px;
+         }
+
+         .sub__title_two {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .introductory__text_three {
+            margin-top: 0;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            font-size: 32px;
+        }
+
+  }
+  .footer {
+    margin-top: 25px;
+    img {
+        margin-left: 18px;
+        margin-bottom: -5px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+
+        .header {
+            margin: 40px 0 25px;
+            text-align: center;
+        }
+
+        .header__search {
+            margin-top: 30px;
+        }
+
+        input[type="search"] {
+            margin-left: 110px;
+        }
+
+        input[type="submit"] {
+            margin-top: 2px;
+            margin-left: 0;
+        }
+
+        .title, .title__2, .title__3 {
+            margin-left: 0;
+            h1 {
+                font-family: Arial;
+                font-size: 9.9vw;
+                font-weight: bold;
+            }
+        }
+
+        .title__2 {
+            margin-bottom: 40px;
+        }
+
+        img[src="assets/images/bookEye.gif"] {
+            margin-top: -35px;
+            margin-left: 43px;
+            width: 330px;
+        }
+
+        .book__anons {
+            margin-top: 40px;
+            margin-left: 70px;
+            margin-bottom: -5px;
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .book__eye {
+            margin-left: 0;
+        }
+
+        .book__tab {
+            position: absolute;
+            top: 475px;
+            left: 85px;
+        }
+
+        .book__top100 {
+            margin-top: -11px;
+            margin-left: 70px;
+            font-size: 24px;
+        }
+
+        .book__button {
+            input[type="submit"] {
+            margin-top: 60px;
+            margin-left: 70px;
+            margin-bottom: 30px;
+            width: 280px; /* Ширина кнопки */
+            height: 50px; /* Высота кнопки */
+            background: url(../assets/images/buttonBuy1.png) no-repeat; /* Параметры фона */
+            background-size: 280px 50px;
+            }
+            input[type="submit"]:hover {
+                background-size: 280px 50px;
+            }
+        }
+
+        .book__info {
+            margin-top: -5px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .book__Scraffi {
+            margin-top: 40px;
+            margin-left: 190px;
+            margin-bottom: -30px;
+        }
+
+        .eyeStage {
+            top: 214px;
+            left: 168px;
+            width: 112px;
+            height: 112px;
+            img {
+                width: 110px;
+            }
+        }
+
+        .book__box_img {
+            margin-left: 125px;
+            margin-bottom: 9px;
+            height: 320px;
+        }
+
+        img[src="assets/images/book3.jpg"], img[src="assets/images/book4.jpg"] {
+            margin-top: 20px;
+        }
+
+        .book__box_text {
+            margin-top: -10px;
+            margin-left: 80px;
+            margin-bottom: 60px;
+        }
+
+        .book__add {
+            padding-left: 20px;
+            input[type="submit"] {
+                margin-top: 35px;
+                margin-left: 85px;
+                margin-bottom: 85px;
+            }
+        }
+
+        .introductory__text_two {
+            margin-top: -20px;
+            margin-left: 0px;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+
+        .sub__title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            h2 {
+                margin-left: 0;
+                font-size: 30px;
+            }
+        }
+
+        .founders__box {
+            margin-top: 35px;
+            margin-left: 39px;
+        }
+
+        .founders__img {
+            margin-bottom: 30px;
+        }
+
+        .heading {
+            margin-bottom: 15px;
+            text-align: left !important;
+            h3 {
+                font-family: Arial;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+
+        .text {
+            margin-bottom: 20px;
+         }
+
+         .sub__title_two {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .introductory__text_three {
+            margin-top: 0;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            font-size: 32px;
+        }
+
+  }
+  .footer {
+    margin-left: 52px;
+    margin-top: 25px;
+    img {
+        margin-left: 18px;
+        margin-bottom: -5px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+
+        .header {
+            margin: 40px 0 25px;
+            text-align: center;
+        }
+
+        .header__logo {
+            float: left;
+            text-align: left;
+        }
+
+        .header__search {
+            float: left;
+            margin-top: -31px;
+            margin-left: 310px;
+        }
+
+        input[type="search"] {
+            margin-left: 0;
+        }
+
+        input[type="submit"] {
+            margin-top: -39px;
+            margin-left: 265px;
+        }
+
+        .title, .title__2, .title__3  {
+            margin-left: 0;
+            h1 {
+                font-family: Arial;
+                font-size: 8vw;
+                font-weight: bold;
+            }
+        }
+
+        .title__2 {
+            margin-bottom: 40px;
+        }
+
+        img[src="assets/images/bookEye.gif"] {
+            margin-top: -35px;
+            margin-left: 125px;
+            width: 330px;
+        }
+
+        .book__anons {
+            margin-top: 40px;
+            margin-left: 150px;
+            margin-bottom: -5px;
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .book__eye {
+            margin-left: 0;
+        }
+
+        .book__tab {
+            position: absolute;
+            top: 475px;
+            left: 175px;
+        }
+
+        .book__top100 {
+            margin-top: -11px;
+            margin-left: 159px;
+            font-size: 24px;
+        }
+
+        .book__button {
+            input[type="submit"] {
+            margin-top: 60px;
+            margin-left: 95px;
+            margin-bottom: 30px;
+            }
+        }
+
+        .book__info {
+            margin-top: -5px;
+            margin-left: 120px;
+            margin-bottom: 10px;
+        }
+
+        .book__Scraffi {
+            margin-top: 40px;
+            margin-left: 260px;
+            margin-bottom: -30px;
+        }
+
+        .eyeStage {
+            top: 212px;
+            left: 248px;
+            width: 112px;
+            height: 112px;
+            img {
+                width: 112px;
+            }
+        }
+
+        .book__box_img {
+            margin-left: 193px;
+            margin-bottom: 9px;
+            height: 320px;
+        }
+
+        .book__box_text {
+            margin-top: -12px;
+            margin-left: 152px;
+            margin-bottom: 60px;
+        }
+
+        img[src="assets/images/book3.jpg"], img[src="assets/images/book4.jpg"] {
+            margin-top: 20px;
+        }
+
+        .book__add {
+            padding-left: 20px;
+            input[type="submit"] {
+                margin-top: 35px;
+                margin-left: 170px;
+                margin-bottom: 70px;
+            }
+        }
+
+        .introductory__text_two {
+            margin-top: -20px;
+            margin-left: 0px;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+
+        .sub__title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            h2 {
+                margin-left: 0;
+                font-size: 30px;
+            }
+        }
+
+        .founders__box {
+            margin-top: 35px;
+            margin-left: 85px;
+        }
+
+        .founders__img {
+            margin-bottom: 30px;
+        }
+
+        .heading {
+            margin-bottom: 15px;
+            text-align: left !important;
+            h3 {
+                font-family: Arial;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+
+        .text {
+            margin-bottom: 20px;
+         }
+
+         .sub__title_two {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .introductory__text_three {
+            margin-top: 0;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            font-size: 32px;
+        }
+
+  }
+  .footer {
+    margin-left: 0px;
+    margin-top: 25px;
+    img {
+        margin-left: 145px;
+        margin-bottom: -5;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+
+        .header {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .header__logo {
+            float: left;
+            text-align: left;
+        }
+
+        .header__search {
+            float: left;
+            margin-top: -28px;
+            margin-left: 400px;
+        }
+
+        input[type="search"] {
+            margin-left: 0px;
+        }
+
+        input[type="submit"] {
+            margin-top: 2px;
+            margin-left: 0;
+        }
+
+        .title, .title__2, .title__3 {
+            margin-left: 0;
+            h1 {
+                font-family: Arial;
+                font-size: 7vw;
+                font-weight: bold;
+            }
+        }
+
+        .title__2 {
+            margin-bottom: 40px;
+        }
+
+        img[src="assets/images/bookEye.gif"] {
+            margin-top: -35px;
+            margin-left: 190px;
+            width: 330px;
+        }
+
+        .book__anons {
+            margin-top: 40px;
+            margin-left: 230px;
+            margin-bottom: -5px;
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .book__eye {
+            margin-left: 0;
+        }
+
+        .book__tab {
+            position: absolute;
+            top: 478px;
+            left: 235px;
+        }
+
+        .book__top100 {
+            margin-top: -11px;
+            margin-left: 225px;
+            font-size: 24px;
+        }
+
+        .book__button {
+            input[type="submit"] {
+            margin-top: 60px;
+            margin-left: 170px;
+            margin-bottom: 30px;
+            }
+        }
+
+        .book__info {
+            margin-top: -5px;
+            margin-left: 205px;
+            margin-bottom: 10px;
+        }
+
+        .book__Scraffi {
+            margin-top: 40px;
+            margin-left: 340px;
+            margin-bottom: -30px;
+        }
+
+        .eyeStage {
+            top: 212px;
+            left: 314px;
+            width: 112px;
+            height: 112px;
+            img {
+                width: 112px;
+            }
+        }
+
+        .book__box_img {
+            margin-left: 264px;
+            margin-bottom: 9px;
+            height: 320px;
+        }
+
+        .book__box_text {
+            margin-top: -12px;
+            margin-left: 218px;
+            margin-bottom: 60px;
+        }
+
+        img[src="assets/images/book3.jpg"], img[src="assets/images/book4.jpg"] {
+            margin-top: 20px;
+        }
+
+        .book__add {
+            padding-left: 20px;
+            input[type="submit"] {
+                margin-top: 35px;
+                margin-left: 230px;
+                margin-bottom: 72px;
+            }
+        }
+
+        .introductory__text_two {
+            margin-top: -20px;
+            margin-left: 0px;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+
+        .sub__title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            h2 {
+                margin-left: 0;
+                font-size: 30px;
+            }
+        }
+
+        .founders__box {
+            margin-top: 35px;
+            margin-left: 85px;
+        }
+
+        .founders__img {
+            margin-bottom: 30px;
+        }
+
+        .founders__img img[src="assets/images/founders__img5.png"],
+            img[src="assets/images/founders__img6.png"] {
+            margin-top: -150px;
+        }
+
+        .heading {
+            margin-bottom: 15px;
+            text-align: left !important;
+            h3 {
+                font-family: Arial;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+
+        .text {
+            margin-bottom: 20px;
+         }
+
+         .sub__title_two {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .introductory__text_three {
+            margin-top: 0;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            font-size: 32px;
+        }
+
+  }
+  .footer {
+    margin-left: 0px;
+    margin-top: 25px;
+    img {
+        margin-left: 225px;
+        margin-bottom: -5;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1265px) {
+    .header {
+        margin: 60px 0 37px;
+        text-align: center;
+    }
+    .header__search {
+        margin-top: -39px;
+        margin-left: 0;
+    }
+
+    .title, .title__2, .title__3 {
+        margin-left: 20px;
+        h1 {
+            font-family: Arial;
+            font-size: 5vw;
+            font-weight: bold;
+        }
+    }
+
+    .book__anons {
+        margin-left: -40px;
+    }
+
+    .book__eye {
+        margin-left: 0;
+        img {
+            width: 19vw !important;
+        }
+    }
+
+    .book__top100 {
+        margin-top: -11px;
+        margin-left: 50px;
+        font-size: 24px;
+    }
+
+    .book__tab {
+        position: absolute;
+        top: 330px !important;
+        left: 120px !important;
+        img {
+            width: 20px;
+        }
+
+    }
+
+    .eyeStage {
+        top: 146px !important;
+        left: 80px !important;
+        width: 65px;
+        height: 65px;
+        img {
+            width: 65px !important;
+        }
+    }
+
+    .eye {
+        top: 150px !important;
+        left: 83px !important;
+        padding-top: 20px !important;
+        padding-left: 24px !important;
+        width: 60px !important;
+        height: 60px !important;
+        img[src="assets/images/eye.png"] {
+            width: 10px !important;
+        }
+
+    }
+
+    .book__button {
+        input[type="submit"] {
+            margin-left: 60px !important;
+            margin-bottom: 0 !important;
+            width: 280px !important; /* Ширина кнопки */
+            height: 50px !important; /* Высота кнопки */
+            background-size: 280px 50px !important;
+        }
+        input[type="submit"]:hover {
+            background-size: 280px 50px !important;
+        }
+    }
+
+    .book__info {
+        margin-left: 20px !important;
+        margin-bottom: 10px;
+    }
+
+    .book__Scraffi {
+        margin-left: 170px !important;
+    }
+
+    .book__anons {
+        p {
+            font-size: 18px !important;
+        }
+    }
+
+    .introductory__text_one {
+        margin-top: 35px;
+        margin-left: 10px;
+    }
+
+    .book__box, .book__box_two {
+        img {
+            width: 200px !important;
+        }
+    }
+
+    .book__box_text {
+        width: 220px;
+        margin-left: -8px;
+        font-size: 14px;
+    }
+
+    .book__add {
+        padding-left: 20px;
+        input[type="submit"] {
+            margin-top: 0;
+            margin-left: 300px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .introductory__text_two, .introductory__text_three {
+        margin-top: -25px;
+        margin-left: 10px;
+    }
+
+    .sub__title, .sub__title_two {
+        h2 {
+            font-size: 42px;
+        }
+    }
+
+    .heading {
+        h3 {
+            font-size: 24px;
+        }
+    }
+
+    .footer {
+        img {
+            margin-left: 365px;
+            margin-bottom: -5;
+        }
+  }
+
+}
+
+@media screen and (min-width: 1066px) and (max-width: 1280px) {
+    .title {
+        margin-left: 145px;
+        h1 {
+            font-size: 72px;
+        }
+    }
+
+    .header__search {
+        margin-top: 0;
+        margin-left: -14px;
+    }
+
+    .book__eye {
+        margin-left: 0;
+        img {
+            width: 19vw !important;
+        }
+    }
+
+    .book__tab {
+        position: absolute;
+        top: 395px !important;
+        left: 180px !important;
+        img {
+            width: 23px;
+        }
+    }
+
+    .eyeStage {
+            top: 180px !important;
+            left: 150px !important;
+            width: 80px;
+            height: 80px;
+            img {
+                width: 80px !important;
+            }
+    }
+
+    .eye {
+        top: 181px !important;
+        left: 152px !important;
+        padding-top: 29px !important;
+        padding-left: 29px !important;
+        width: 77px !important;
+        height: 77px !important;
+        z-index: 1000 !important;
+        img[src="assets/images/eye.png"] {
+            width: 14px !important;
+        }
+    }
+
+    .book__top100 {
+        margin-top: -11px;
+        margin-left: 117px;
+        font-size: 24px;
+    }
+
+    img[src="assets/images/bookEye.gif"] {
+        margin-top: 0;
+        margin-left: 55px;
+        width: 330px;
+    }
+
+    .book__info {
+        margin-left: 93px !important;
+        margin-bottom: 12px;
+    }
+
+    .book__Scraffi {
+        margin-left: 235px !important;
+        margin-bottom: -30px;
+    }
+
+    .book__anons {
+        margin-left: 20px;
+        p {
+            font-size: 18px !important;
+        }
+    }
+
+    .founders__box {
+        margin-left: 60px !important;
+    }
+
+    .sub__title, .sub__title_two {
+        h2 {
+            font-size: 42px;
+        }
+    }
+
+    .heading {
+        h3 {
+            font-size: 24px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
+    .header__search {
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    input[type="search"] {
+        width: 275px;
+    }
+
+    input[type="submit"] {
+        margin-left: 290px;
+    }
+
+    .title {
+        margin-top: -33px;
+        margin-left: 150px;
+        width: 980px;
+        h1 {
+            font-size: 72px;
+        }
+    }
+
+    img[src="assets/images/bookEye.gif"] {
+        margin-top: -20px;
+        margin-left: -17px;
+        width: 31vw !important;
+    }
+
+    .eyeStage {
+        top: 296px !important;
+        left: 140px !important;
+
+        img {
+            width: 137px !important;
+        }
+    }
+
+    .book__tab {
+        position: absolute;
+        top: 625px !important;
+        left: 120px !important;
+    }
+
+    .book__anons {
+        margin-top: 35px !important;
+        margin-left: 37px;
+        p {
+            margin-top: 1px !important;
+            margin-left: -12px !important;
+            width: 270px !important;
+            font-size: 22px !important;
+            line-height: 1.5 !important;
+        }
+        > #text__quotes {
+            &:before {
+                content: "«";
+            }
+            &:after {
+                line-height: 1.4 !important;
+            }
+        }
+    }
+
+    img[src="assets/images/bookAnons2.jpg"] {
+        margin: 30px 0 30px 75px !important;
+    }
+    img[src="assets/images/bookAnons2.jpg"] + p {
+        margin-top: 0 !important;
+        margin-left: -6px !important;
+    }
+
+    img[src="assets/images/bookAnons3.jpg"] {
+        margin: 42px 0 30px 15px !important;
+    }
+    img[src="assets/images/bookAnons3.jpg"] + p {
+        margin-top: 0 !important;
+        margin-left: -44px !important;
+    }
+
+
+    img[src="assets/images/bookAnons4.jpg"] {
+        margin: 2px 0 5px -15px !important;
+    }
+    img[src="assets/images/bookAnons4.jpg"] + p {
+        margin-top: 4px !important;
+        margin-left: -41px !important;
+    }
+
+    .eye {
+        top: 283px !important;
+        left: 145px !important;
+        padding-top: 44px !important;
+        padding-left: 43px !important;
+        z-index: 1000 !important;
+        img[src="assets/images/eye.png"] {
+            width: 22px !important;
+        }
+    }
+
+    .founders__box {
+        margin-left: 70px !important;
+    }
+
+    .sub__title, .sub__title_two {
+        h2 {
+            font-size: 42px;
+        }
+    }
+
+    .heading {
+        h3 {
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
+    .eyeStage {
+        top: 274px !important;
+        left: 138px !important;
+
+        img {
+        }
+    }
+
+    .eye {
+        top: 233px !important;
+        left: 126px !important;
+        padding-top: 44px !important;
+        padding-left: 43px !important;
+        z-index: 1000 !important;
+        img[src="assets/images/eye.png"] {
+            width: 22px !important;
+        }
+    }
+
+    .book__tab {
+        position: absolute;
+        top: 500px !important;
+        left: 128px !important;
+    }
+}
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

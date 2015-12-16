@@ -1,0 +1,61 @@
+﻿<div class="container">
+    <div class="row header">
+        <div class="col-xs-12 col-md-5 col-lg-3">
+            <div class="header__logo">
+                <a href="javascript:void(0);"><img src="assets/images/logo.png" alt="Тестовая верстка миф"></a>
+            </div>
+        </div>
+        <div class="col-lg-offset-6 col-md-offset-8 col-xs-12 col-md-4 col-lg-2">
+            <div class="header__search">
+                <form name="myForm" action="/" method="get" target="_self">
+                    <input type="search" id="search" ng-model="search_text" placeholder="{{placeholder}}" />
+                    <input type="submit" value="" title="найти">
+                </form>
+                <p ng-if="search_text"><mark>Текст поиска:</mark> {{search_text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<script>
+
+    var input = document.getElementById('search');
+    input.placeholder="Поиск, скорее всего не работает";
+
+    setTimeout('process()', 500);
+
+    function setCaretPosition(ctrl, pos)
+    {
+
+	    if(ctrl.selectionStart || ctrl.setSelectionRange)
+	    {
+		    ctrl.focus();
+		    ctrl.setSelectionRange(pos,pos);
+	    }
+	    else if (ctrl.createTextRange) {
+		    var range = ctrl.createTextRange();
+		    range.collapse(true);
+		    range.moveEnd('character', pos);
+		    range.moveStart('character', pos);
+		    range.select();
+	    }
+        else {
+            ctrl.focus();
+        }
+    }
+
+    function process()
+    {
+	    var no = 2;
+	    setCaretPosition(input,no);
+    }
+
+    input.onfocus = function() {
+        this.placeholder="Поиск, скорее всего не работает";
+        this.value='  ';
+        //var no = 2;
+	    //setCaretPosition(input,no);
+    }
+</script>
+-->

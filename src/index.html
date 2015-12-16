@@ -1,0 +1,338 @@
+﻿<!doctype html>
+<html lang="ru" ng-app="mifApp">
+  <head>
+    <meta charset="utf-8">
+    <title>miftodo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="MifCtrl">
+
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--Вывод шаблона хедера-->
+    <header></header>
+
+    <main>
+    <div class="container">
+        <section id="page__first">
+            <div class="row">
+                <div class="col-xs-12 col-lg-9 title"><h1>Мы издаем книги — вы их можете не читать</h1></div>
+            </div>
+            <div class="row td hidden-xs hidden-sm">
+                <div class="col-xs-12 col-lg-3 book__anons">
+                    <img src="assets/images/bookAnons1.jpg" alt="Тестовая верстка миф">
+                    <p id="text__quotes">
+                        Эта книга доказывает ничтожность человеческой массы
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-lg-3 book__anons">
+                    <img src="assets/images/bookAnons2.jpg" alt="Тестовая верстка миф">
+                    <p>
+                        В книге чувствуется безысходность  и бесполезность
+                    </p>
+                </div>
+            </div>
+            <div class="row td">
+                <div class="col-xs-12 col-lg-6 book__eye" ng-mouseover="animation()">
+                    <img src="assets/images/bookEye.gif" id="rotate" alt="Тестовая верстка миф">
+                    <div id="eyeStage" class="eyeStage">
+                        <img id="eyeStage_img" src="assets/images/eyeStage1.png" alt="Тестовая верстка миф">
+                    </div>
+                    <!--<div id="eye" class="eye hidden-xs hidden-sm">
+                        <img src="assets/images/eye.png" alt="Тестовая верстка миф">
+                    </div>-->
+                </div>
+                <div class="clearfix"></div>
+                <div class="book__tab">
+                    <img src="assets/images/bookTab.jpg" alt="Тестовая верстка миф">
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-offset-3 book__top100">
+                    В топ-100 <span>Zoidberg</span>zon.com в разделах «Это правда было так»  и «Когнитивный писсонанс»
+                </div>
+                <div class="col-lg-offset-3 book__button hidden-xs hidden-sm" ng-mouseleave="buyBook()">
+                    <input type="submit" value="" title="купить" ng-click="buyBook()">
+                </div>
+                <div class="clearfix"></div>
+                <div class="book__info hidden-xs hidden-sm ">
+                    Наши цены самые непредсказуемые и формируются нашим уборщиком Скраффи
+                </div>
+                <div class="col-lg-offset-5 book__Scraffi hidden-xs hidden-sm ">
+                    <img src="assets/images/Scraffi.png" id="scraffi" alt="Тестовая верстка миф">
+                </div>
+
+
+            <!--Для малых устройств-->
+            <div class="row td hidden-lg hidden-md">
+                <div class="col-xs-12 col-sm-6 book__anons">
+                    <img src="assets/images/bookAnons1.jpg" alt="Тестовая верстка миф">
+                    <p id="text__quotes">
+                        Эта книга доказывает ничтожность человеческой массы
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-6 col-sm-6 book__anons">
+                    <img src="assets/images/bookAnons2.jpg" alt="Тестовая верстка миф">
+                    <p>
+                        В книге чувствуется безысходность  и бесполезность
+                    </p>
+                </div>
+                <div class="col-xs-12 book__button">
+                    <input type="submit" value="" title="купить">
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 book__info">
+                    Наши цены самые непредсказуемые и формируются нашим уборщиком Скраффи
+                </div>
+                <div class="col-lg-offset-5 book__Scraffi">
+                    <img src="assets/images/Scraffi.png" alt="Тестовая верстка миф">
+                </div>
+            </div>
+            <!--Конец разметки, для малых устройств-->
+
+            </div>
+            <div class="row td hidden-xs hidden-sm ">
+                <div class="col-xs-12 col-lg-3 book__anons">
+                    <img src="assets/images/bookAnons3.jpg" alt="Тестовая верстка миф">
+                    <p>
+                        Книга неправильно переведена  на двоичный код
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-lg-3 book__anons">
+                    <img src="assets/images/bookAnons4.jpg" alt="Тестовая верстка миф">
+                    <p>
+                        В каждой книге магнит, который вытягивает вашу мелочь
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="page__two">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 title__2">
+                    <h1>Самое незаметное издательство</h1>
+                </div>
+            </div>
+            <div class="row hidden-xs hidden-sm">
+                <div class="col-xs-12 col-lg-9 introductory__text_one">
+                    Перетаскивайте книги ниже с места на место. Это то, чем мы любим больше всего заниматься. Попробуйте, вам понравится.
+                </div>
+            </div>
+            <!--Вывод списка книг на страницу-->
+            <div class="row" id="book__boxs" dnd-list="books">
+                <div class="col-xs-12 col-md-3 col-lg-3 book__box" ng-repeat="book in books"
+                    dnd-draggable="book"
+                    dnd-moved="books.splice($index, 1)"
+                    dnd-effect-allowed="move"
+                >
+                    <div class="book__box_img"><a href="{{book.imageUrl}}"><img src="{{book.imageUrl}}" alt="Тестовая верстка миф"></a></div>
+                    <p class="book__box_text" ng-bind-html="book.text">
+                        {{book.text}}
+                    </p>
+                </div>
+            </div>
+
+            <!--Блок для добавления новых книг-->
+            <div class="row book__boxMain"></div>
+
+            <div class="row col-lg-offset-5 book__add">
+                <input type="submit" value="Еще несколько книг" title="добавить" ng-click="addBook()">
+            </div>
+
+        </section>
+        <section id="page__three">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 title__3">
+                    <h1>Вы работаете — мы отдыхаем</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-offset-2 col-lg-9 introductory__text_two">
+                    Мы не несем ответственность за изданные книги. Мы выбираем книги случайно и где попало. Наши любимые темы не определены, не глубоки и не интересны.
+                    Мы считаем, что краткость. Поэтому мы обходимся двумя словами, чтобы выразить все эмоции и донести смысл.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 sub__title">
+                    <h2>История названия</h2>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                    Название издательства «Фрай, без штанов и Бендер» является отсылкой к известному мировому издательству XXI века &laquo;<i>Манн, Иванов и Фербер</i>&raquo;.
+                    После того как издательство смоделировало искусственный интеллект (вобравший в себя 25 триллионов изданных книг), и все ее сотрудники исчезли в Бесконечном
+                    Нейронном Пространстве межгалактический совет запретил издавать бумажные книги.
+                </div>
+            </div>
+            <!--Для малых устройств-->
+            <div class="row hidden-lg hidden-md founders__box">
+                <div class="col-xs-6 col-sm-4 founders__img">
+                    <img src="assets/images/founders__img1.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-6 col-sm-4 founders__img">
+                    <img src="assets/images/founders__img2.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-6 col-sm-4 founders__img">
+                    <img src="assets/images/founders__img3.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-6 col-sm-4 founders__img">
+                    <img src="assets/images/founders__img4.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-6 col-sm-4 founders__img">
+                    <img src="assets/images/founders__img5.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-6 col-sm-4 founders__img">
+                    <img src="assets/images/founders__img6.png" alt="Тестовая верстка миф">
+                </div>
+            </div>
+            <!--Конец разметки, для малых устройств-->
+
+            <div class="row hidden-xs hidden-sm founders__box">
+                <div class="col-xs-12 col-lg-2 col-md-2 hidden-xs hidden-sm  founders__img">
+                    <img src="assets/images/founders__img1.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-12 col-lg-2 col-md-2 founders__img">
+                    <img src="assets/images/founders__img2.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-12 col-lg-2 col-md-2 founders__img">
+                    <img src="assets/images/founders__img3.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-12 col-lg-2 col-md-2 founders__img">
+                    <img src="assets/images/founders__img4.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-12 col-lg-2 col-md-2 founders__img">
+                    <img src="assets/images/founders__img5.png" alt="Тестовая верстка миф">
+                </div>
+                <div class="col-xs-12 col-lg-2 col-md-2 founders__img">
+                    <img src="assets/images/founders__img6.png" alt="Тестовая верстка миф">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 sub__title">
+                    <h2>Основатели</h2>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 heading">
+                    <h3>Филип Джей Фрай</h3>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                    <p>
+                        В 1999 году Фрай встречался с девушкой по имени Мишель и работал курьером в «Пиццерии Пануччи». Жизнь у него пустая, его ничего не интересует, кроме, разве что игровых автоматов.
+                    </p>
+                    <p>
+                        Жил он, судя по всему, у Мишель. 31 декабря 1999 года Мишель отшила его, и ему надо было доставить пиццу в криогенную лабораторию. Однако только там он заметил, что это был розыгрыш. Он сидел один в пустом здании лаборатории и качался на стуле, поедая пиццу, когда часы пробили полночь, и в этот момент Фрай упал со стула и попал в криогенную капсулу, в которой был заморожен на 1000 лет и был разморожен только 31 декабря 2999 года.
+                    </p>
+                    <p>
+                        Позднее, в эпизоде «The Why of Fry», оказалось, что это Зубастик подтолкнул Фрая, чтобы он упал в криокамеру, для того чтобы Фрай спас вселенную в серии «The Day the Earth Stood Stupid». В этом же эпизоде выяснилось, что Фрая подтолкнул сам Фрай, из будущего. Причина — девушка: Зубастик заключает с Фраем сделку — Филип помогает защищать Вселенную от грозящих ей в XXXI веке опасностей, а зубастильонцы, в свою очередь, помогают ему добиться взаимности от Лилы.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 heading">
+                    <h3>Бендер Сгибатель Родригес великий, <br> незаконнособранный</h3>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                    <p>
+                        Бендер Сгибатель Родригез, более известный как Бендер — один из главных персонажей «Футурамы». Он был сделан в Мексике (Тихуана) в 2997 году. Имеет серийный номер 2716057. Авантюрист, любит курить сигары. В настоящее время живет с Фраем в квартире.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 sub__title_two">
+                    <h2>Сотрудники</h2>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 heading">
+                    <h3>Скраффи Скраффингтон</h3>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                    <p>
+                        Скраффи Скраффингтон, или просто Скраффи — уборщик в компании «Планет Экспресс». О нём часто повторяют шутки про то, что он мало взаимодействует с остальным коллективом и многие его просто не помнят или никогда не видели раньше. Также, Скраффи является владельцем 40 тыс. акций «Планет Экспресса», и это больше, чем у остальных сотрудников, поскольку он «больше всех любит свою компанию» (по его словам).
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-offset-1 col-lg-9 introductory__text_three">
+                    Сотрудники издательства были не раз замечены в провокациях и совершали бессмысленные действия.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 heading">
+                    <h3>Ужасный студень</h3>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                    <p>
+                        Добродушный пришелец, но прибегает к насилию даже при малейшей провокации. Как правило глотает негодяя.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 heading">
+                    <h3>Калькулон</h3>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                    <p>
+                        Рекламное лицо компании.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 heading">
+                    <h3>Зепп Бранниган</h3>
+                </div>
+                <div class="col-xs-12 col-lg-offset-3 col-lg-6 text">
+                        <p>
+                            Зепп Бранниган (англ. Zapp Brannigan, полное имя Уэбело Зепп Бранниган, англ. Webelo Zapp Brannigan) — персонаж, человек, капитан корабля Нимбус. Питает страстью к Лиле, но она не отвечает взаимностью. Имеет собственного помощника — Кифа. Часто заставляет его делать неприятную работу, например, почесать спинку, намылить Зеппу голову в душе и так далее. Занимает должность генерала в армии.
+                        </p>
+                        <p>
+                            Киф ненавидит Зеппа, но вынужден служить ему. Больше всего Киф ненавидит, когда Зепп его просит:
+                        </p>
+                        <ul>
+                            <li>потереть спинку;</li>
+                            <li>подать свежее нижнее белье в душ;</li>
+                            <li>позвонить в службу доставки парфюма и угрозами об уничтожении выпросить 99% скидку на любимые духи Зеппа; </li>
+                            <li>помыть посуду;</li>
+                        </ul>
+                        <p>
+                            В остальном Киф доволен службой в Ограниченных Галактических Непобедимых войсках на должности помощника генерала.
+                        </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <!--Вывод шаблона футера-->
+    <footer></footer>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp wiredep` to automaticaly populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automaticaly insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>

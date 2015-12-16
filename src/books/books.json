@@ -1,0 +1,42 @@
+﻿[
+    {
+        "id": "1",
+        "imageUrl": "assets/images/book1.jpg",
+        "text": "<a href=\"assets/images/book1.jpg\" target=\"blank\">Краткая история почти ничего.</a> <br> Эта книга — недоразуменье."
+    },
+    {
+        "id": "2",
+        "imageUrl": "assets/images/book2.jpg",
+        "text": "<a href=\"assets/images/book2.jpg\" target=\"blank\">Все знания о вселенной</a> <br> компактно упакованы  на одной странице."
+    },
+    {
+        "id": "3",
+        "imageUrl": "assets/images/book3.jpg",
+        "text": "Автор подробно, всего двумя фразами, <a href=\"assets/images/book4.jpg\" target=\"blank\">объясняет все.</a>"
+    },
+    {
+        "id": "4",
+        "imageUrl": "assets/images/book4.jpg",
+        "text": "Двоичные <a href=\"assets/images/book4.jpg\" target=\"blank\">размышления <br> о жизни после пресса.</a>"
+    },
+    {
+        "id": "5",
+        "imageUrl": "assets/images/book5.jpg",
+        "text": "Прозрачные тексты на мутные <br> темы."
+    },
+    {
+        "id": "6",
+        "imageUrl": "assets/images/book6.jpg",
+        "text": "О чем спросить первого <br> встречного мутанта с другой <br> планеты. Руководство <br> по умиранию."
+    },
+    {
+        "id": "7",
+        "imageUrl": "assets/images/book7.jpg",
+        "text": "Технические чертежи и детали <br> самого лучшего робота <br> на свете."
+    },
+    {
+        "id": "8",
+        "imageUrl": "assets/images/book8.jpg",
+        "text": "Коротко и ясно. Кому не ясно <br> — Люрр объяснит. Коротко."
+    }
+]
