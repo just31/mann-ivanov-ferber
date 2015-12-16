@@ -5,7 +5,7 @@ var mifApp = angular.module('mifApp', ["mifAppDepend"]);
 mifApp.controller('MifCtrl', ['$scope', '$http', 'api', function ($scope, $http, api)
 {
 
-    // Запрашиваем и получаем данные, нашей модели, с описанием книг. Данные нужны, для добавления списка книг на страницу, и их перемещения.
+    // Запрашиваем и получаем данные нашей модели, с описанием книг. Данные нужны, для добавления списка книг на страницу, и их перемещения.
     $http.get('books/books.json').success(function(data) {
         $scope.books = data;
     });
@@ -15,39 +15,25 @@ mifApp.controller('MifCtrl', ['$scope', '$http', 'api', function ($scope, $http,
         $scope.modelAsJson = angular.toJson(books, true);
     }, true);
 
-    //$scope.orderProp = 'text';
 
-     // Функция добавления еще 4 книг на страницу, в случайном порядке.
-     $scope.addBook = function() {
+    // Функционал добавления еще 4 книг на страницу, в случайном порядке.
+    // Запрашиваем и получаем данные модели, с описанием книг. Для добавления их по кнопке - "Еще несколько книг". Данные сортируются.
+    $http.get('books/booksSort.json').success(function(data) {
+            $scope.booksSort = data;
+    });
+    // Функция показа, отсортированного массива книг.
+    $scope.addBook = function() {
+        // Показываем заголовок над добавленными книгами и сам блок с новыми книгами, делаем видимым.
+        angular.element(".heading__sort").css({'display' : 'block'});
+        angular.element(".book__boxMain").css({'opacity' : '1'});
 
-        angular.element(".book__boxMain").empty();
-        angular.element(".book__boxMain").css({'height' : '400px', 'margin-bottom' : '30px'});
-
-        var url = ['assets/ajax/addBook1.html','assets/ajax/addBook2.html','assets/ajax/addBook3.html'];
-
+        // Функция сортировки массива, в случайном порядке
         function compareRandom(a, b) {
             return Math.random() - 0.5;
         }
 
-        var urlAjax = url.sort(compareRandom),
-            rand = Math.floor(Math.random() * urlAjax.length);
-
-        $scope.method = 'GET';
-        $scope.url = url[rand];
-
-        $http({method: $scope.method, url: $scope.url}).
-            success(function(data, status) {
-
-                // найдем и сохраним div-элемент, с классом .book__boxMain
-                var $matched = angular.element(".book__boxMain");
-
-                // заполним его данными из случайно выбранного файла.
-                $matched.append(data).animate({'opacity' : 1}, 500);
-            }).
-            error(function(data, status) {
-                $scope.data = data || "Request failed";
-                $scope.status = status;
-        });
+        // Сортируем массив книг
+        $scope.sortBooks = $scope.booksSort.sort(compareRandom);
     }
 
     // Функционал переворачивания изображения Скраффи на 360 градусов, при клике на кнопку "Купить за...".
