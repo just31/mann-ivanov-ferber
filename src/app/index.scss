@@ -314,6 +314,39 @@ input[type="submit"]::-moz-focus-inner {
 .dndPlaceholder {
     display: block;
     list-style: none !important;
+    width: 800px !important;
+}
+
+.heading__sort {
+    margin-top: 10px;
+    margin-bottom: -20px;
+    display: none;
+    text-align: center;
+    font-family: Arial;
+    font-size: 32px;
+}
+
+.animate-enter-setup, .heading__sort {
+   -webkit-animation: enter_sequence 1s linear;
+   -moz-animation: enter_sequence 1s linear;
+   -o-animation: enter_sequence 1s linear;
+   animation: enter_sequence 1s linear;
+ }
+@-webkit-keyframes enter_sequence {
+   from { opacity:0; }
+   to { opacity:1; }
+ }
+@-moz-keyframes enter_sequence {
+   from { opacity:0; }
+   to { opacity:1; }
+ }
+@-o-keyframes enter_sequence {
+   from { opacity:0; }
+   to { opacity:1; }
+}
+@keyframes enter_sequence {
+   from { opacity:0; }
+   to { opacity:1; }
 }
 
 .book__box {
