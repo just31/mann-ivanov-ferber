@@ -13,4 +13,4 @@
 
 npm i && bower i
 
-Запуск проект командой gulp serve.
+Запуск проекта командой gulp serve.
