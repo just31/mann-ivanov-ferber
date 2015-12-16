@@ -96,4 +96,3 @@ mifApp.controller('MifCtrl', ['$scope', '$http', 'api', function ($scope, $http,
 
     $scope.placeholder = "Поиск, скорее всего не работает";
 }]);
-
